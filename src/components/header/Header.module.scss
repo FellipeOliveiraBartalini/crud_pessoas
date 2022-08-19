@@ -1,0 +1,18 @@
+@import 'styles/globals.scss';
+
+.header {
+    width: $defualt-width;
+    margin: $margin-center;
+    padding: $defualt-space;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $clr-dark-primary;
+    box-shadow: $box-shadow;
+
+    h1 {
+        color: $clr-white;
+    }
+}

@@ -1,0 +1,11 @@
+@import 'styles/globals.scss';
+
+.container {
+    width: $defualt-width;
+    margin: $defualt-space auto;
+    padding: $defualt-space;
+
+    background-color: $clr-container;
+
+    box-shadow: $box-shadow;
+}
