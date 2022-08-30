@@ -1,0 +1,65 @@
+@import 'styles/globals.scss';
+
+.table {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    background: $clr-white;
+    border-spacing: 1;
+    border-collapse: collapse;
+    border-radius: $border-radius;
+
+    box-shadow: $box-shadow;
+
+    .table__row {
+        height: 60px;
+        transition: all .225s;
+        
+        .table__cell {
+            padding: $default-space;
+            text-align: center;
+            
+            .table__link {
+                padding: 0;
+
+                font-size: 1em;
+                font-weight: 500;
+                text-decoration: none;
+
+                color: $clr-black;
+                background: transparent;
+                border: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .table__loading {
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+
+    .table__head {
+        background-color: $clr-darker-primary;
+    
+        .table__cell {
+            color: $clr-white;
+        }
+    }
+
+    .table__body {
+
+        .table__row {
+            &:hover {
+                background-color: $clr-light-grey;
+            }
+        }
+    }
+}
