@@ -1,18 +1,41 @@
 @import 'styles/globals.scss';
 
 .header {
-    width: $defualt-width;
+    width: $default-width;
     margin: $margin-center;
-    padding: $defualt-space;
+    padding: $default-space;
+    padding-bottom: 24px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: $clr-dark-primary;
+    background-color: $clr-darker-primary;
     box-shadow: $box-shadow;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
 
     h1 {
+        padding-top: 4px;
+        text-align: center;
         color: $clr-white;
+    }
+
+    .btnVoltar {
+        padding: 4px 16px;
+
+        position: absolute;
+        justify-self: flex-start;
+
+        color: $clr-white;
+        background-color: transparent;
+
+        cursor: pointer;
+        border: none;
+        border-radius: $border-radius;
+
+        transition: background-color .125s;
+
+        &:hover {
+            border: none;
+            color: $clr-black;
+            background-color: #fff;
+        }
     }
 }
