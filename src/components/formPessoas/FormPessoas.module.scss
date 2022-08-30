@@ -1,0 +1,55 @@
+@import 'styles/globals.scss';
+
+.formPessoas {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 75px auto;
+    grid-template-rows: repeat(5, 1fr);
+    text-align: right;
+    gap: 1em;
+
+
+    .formPessoas__label {
+        grid-column: 1;
+        align-self: center;
+    }
+
+    .formPessoas__input {
+        grid-column: 2;
+        padding: .5em;
+
+        border: none;
+        border-radius: $border-radius;
+        outline: none;
+
+        &:focus {
+            outline: 1px solid $clr-dark-primary;
+        }
+    }
+
+    .formPessoas__submit {
+        width: 40%;
+        margin: 0 auto;
+        grid-column: span 2;
+
+        color: $clr-white;
+        background-color: $clr-darker-primary;
+
+        cursor: pointer;
+        border: none;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+
+        transition: background-color .125s;
+
+        &:hover {
+            background-color: $clr-dark-primary;
+            border: none;
+        }
+
+        &:active {
+            background-color: $clr-light-primary;
+        }
+    }
+}
