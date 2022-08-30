@@ -1,27 +1,27 @@
 import React from 'react';
 import { enviroment } from 'enviroment';
-import Pessoa from 'types/pessoa';
+import IPessoa from 'types/IPessoa';
 
 export default class PessoaService {
     getAllPessoas() {
-        return enviroment.get<Pessoa[]>(`pessoas/`);
+        return enviroment.get<IPessoa[]>(`pessoas/`);
     }
     
     getPessoaById(id: number) {
-        return enviroment.get<Pessoa>(`pessoas/${id}`);
+        return enviroment.get<IPessoa>(`pessoas/${id}`);
     }
     
-    createPessoa(pessoa: Pessoa) {
+    createPessoa(pessoa: IPessoa) {
         pessoa.update = false;
-        return enviroment.post<Pessoa>(`pessoas/`, pessoa);
+        return enviroment.post<IPessoa>(`pessoas/`, pessoa);
     }
     
-    updatePessoa(pessoa: Pessoa) {
+    updatePessoa(pessoa: IPessoa) {
         pessoa.update = true;
-        return enviroment.post<Pessoa>(`pessoas/`, pessoa);
+        return enviroment.post<IPessoa>(`pessoas/`, pessoa);
     }
     
     deletePessoa(id: number) {
-        return enviroment.delete<Pessoa>(`pessoas/${id}`);
+        return enviroment.delete<IPessoa>(`pessoas/${id}`);
     }
 }
